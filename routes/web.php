@@ -20,6 +20,8 @@ Route::get('/', function () {
 Route::get('/teams', [\App\Http\Controllers\TeamController::class, 'index']);
 Route::get('/teams/create', [\App\Http\Controllers\TeamController::class, 'create']);
 Route::post('/teams/create', [\App\Http\Controllers\TeamController::class, 'store']);
+// View a team's assigned team members
+//Route::get('/team/{$team}/members', [\App\Http\Controllers\TeamController::class, 'showMembers']);
 
 // Internal Team Members
 Route::get('/team-members', [\App\Http\Controllers\TeammemberController::class, 'index']);
