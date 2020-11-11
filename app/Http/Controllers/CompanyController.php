@@ -15,6 +15,7 @@ class CompanyController extends Controller
     public function index()
     {
         //
+        <h1>Hi</h1>
     }
 
     /**
