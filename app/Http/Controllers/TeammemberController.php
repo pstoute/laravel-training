@@ -14,7 +14,8 @@ class TeammemberController extends Controller
      */
     public function index()
     {
-        //
+        // Show teammembers
+        return view('teammembers/index');
     }
 
     /**
@@ -24,7 +25,8 @@ class TeammemberController extends Controller
      */
     public function create()
     {
-        //
+        // Create a teammember
+        return view('teammembers/create');
     }
 
     /**
@@ -35,7 +37,10 @@ class TeammemberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Store new team member in database
+        $data = $request->except('_token');
+        Team::create($data);
+        return redirect('/teammembers');
     }
 
     /**
@@ -46,7 +51,7 @@ class TeammemberController extends Controller
      */
     public function show(Teammember $teammember)
     {
-        //
+        // Show a single teammember
     }
 
     /**
@@ -57,7 +62,7 @@ class TeammemberController extends Controller
      */
     public function edit(Teammember $teammember)
     {
-        //
+        // Update a single teammember
     }
 
     /**
@@ -69,7 +74,7 @@ class TeammemberController extends Controller
      */
     public function update(Request $request, Teammember $teammember)
     {
-        //
+        // Update the teammember in the database
     }
 
     /**
@@ -80,6 +85,7 @@ class TeammemberController extends Controller
      */
     public function destroy(Teammember $teammember)
     {
-        //
+        // Delete the teammember out of the database
+        // This action is irreversible.
     }
 }

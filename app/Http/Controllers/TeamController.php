@@ -18,6 +18,16 @@ class TeamController extends Controller
     }
 
     /**
+     * Display a listing of all associated team members.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showMembers($team)
+    {
+        return view('/team/{$team}/members')
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

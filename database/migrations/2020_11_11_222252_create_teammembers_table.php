@@ -18,6 +18,7 @@ class CreateTeammembersTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             // Associated Teams
+            // Last Active Timestamp
             $table->timestamps();
         });
     }
