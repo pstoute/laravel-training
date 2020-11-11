@@ -33,9 +33,9 @@ class TeamController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $team)
+    public function store(Request $request)
     {
-        return response()->json($team);
+        return response()->json($request);
     }
 
     /**
