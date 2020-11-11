@@ -9,5 +9,5 @@ class Team extends Model
 {
     use HasFactory;
 
-    $guarded = [];
+    protected $guarded = [];
 }

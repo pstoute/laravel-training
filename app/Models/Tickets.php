@@ -9,5 +9,5 @@ class Tickets extends Model
 {
     use HasFactory;
 
-    $guarded = [];
+    protected $guarded = [];
 }
