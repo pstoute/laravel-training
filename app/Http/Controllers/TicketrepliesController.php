@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Company;
+use App\Models\Ticketreplies;
 use Illuminate\Http\Request;
 
-class CompanyController extends Controller
+class TicketrepliesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,6 @@ class CompanyController extends Controller
     public function index()
     {
         //
-        return view('/company/index');
     }
 
     /**
@@ -25,7 +24,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('/company/create');
+        //
     }
 
     /**
@@ -36,18 +35,16 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->except('_token');
-        Company::create($data);
-        return redirect('/companies');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Company  $company
+     * @param  \App\Models\Ticketreplies  $ticketreplies
      * @return \Illuminate\Http\Response
      */
-    public function show(Company $company)
+    public function show(Ticketreplies $ticketreplies)
     {
         //
     }
@@ -55,10 +52,10 @@ class CompanyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Company  $company
+     * @param  \App\Models\Ticketreplies  $ticketreplies
      * @return \Illuminate\Http\Response
      */
-    public function edit(Company $company)
+    public function edit(Ticketreplies $ticketreplies)
     {
         //
     }
@@ -67,10 +64,10 @@ class CompanyController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Company  $company
+     * @param  \App\Models\Ticketreplies  $ticketreplies
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Company $company)
+    public function update(Request $request, Ticketreplies $ticketreplies)
     {
         //
     }
@@ -78,10 +75,10 @@ class CompanyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Company  $company
+     * @param  \App\Models\Ticketreplies  $ticketreplies
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Company $company)
+    public function destroy(Ticketreplies $ticketreplies)
     {
         //
     }

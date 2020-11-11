@@ -15,7 +15,10 @@ class CreateClientsTable extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->notnull();
+            $table->string('first_name');
+            $table->string('last_name');
+            // Associated Companies
+            // Last Active Timestamp
             $table->timestamps();
         });
     }
