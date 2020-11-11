@@ -35,7 +35,9 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        return response()->json($request);
+        $data = $request->except('_token');
+        Team::create($data);
+        return redirect('/teams');
     }
 
     /**
